@@ -1,9 +1,11 @@
 import React from 'react';
-import './HomePage.module.scss';
-
+import './HomePage.scss';
+import Carousel from '~/components/Carousel';
 
 export default function HomePage() {
   return (
-    <div>Home</div>
+    <div>
+      <Carousel></Carousel>
+    </div>
   )
 }

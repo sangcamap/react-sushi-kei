@@ -1,5 +1,5 @@
 import React from 'react';
-import './MenuPage.module.scss';
+import './MenuPage.scss';
 
 
 export default function MenuPage() {

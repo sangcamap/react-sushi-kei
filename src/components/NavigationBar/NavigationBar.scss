@@ -1,0 +1,106 @@
+@import '../Mixin&Var/Variables.scss';
+@import '../Mixin&Var/Mixins.scss';
+@font-face {
+    font-family: iCiel;
+    src: url('../../assets/fonts/iCiel\ Finch\ Bold.otf');
+}
+
+
+.Navbar{
+    background: $cl-dark;
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    position: relative;
+
+    &__logo{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: auto;
+        height: 5rem;
+        &__img{
+            display: block;
+            height: 100%;
+            width: 5rem;
+        }
+
+        &__name{
+            font-size: 4rem;
+            color: $cl-f;
+            font-family: iCiel;
+            padding-top: 0.5rem;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        gap: 4rem;
+        color: $cl-f;
+        font-size: 1.5rem;
+        &__item{
+            display: flex;
+            align-self: center;
+            gap: 1rem;
+            border: 0;
+            position: relative;
+            transition: 0.4s ease-in-out;
+            color: $cl-f;
+            &:hover{
+                cursor: pointer;
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 0.5rem;
+                    border-bottom: 0.3rem solid $cl-gold;
+                    position: absolute;
+                    bottom: -0.5rem;
+                }
+            }
+        }
+    }
+
+    &__menuBtn{
+        display: none;
+        color: $cl-0;
+        background: $cl-f;
+        height: 4rem;
+        width: 4rem;
+        border-radius: $rds;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+    }
+}
+
+
+@include respondsive(phone){
+    .Navbar__menu{
+        background: $cl-dark-2;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        display: flex;
+        &__item{
+            background: $cl-f;
+            border-radius: $rds;
+            color: $cl-0;
+            padding: 1rem;
+        }
+    }
+    .isPhone{
+        display: none;
+    }
+    .Navbar__menuBtn{
+        display: flex;
+    }
+}

@@ -1,0 +1,17 @@
+@mixin respondsive($breakpoint){
+    @if $breakpoint == land{
+        @media (max-width: 1800px){
+            @content
+        };
+    }
+    @if $breakpoint == tab{
+        @media (max-width: 1200px){
+            @content
+        };
+    }
+    @if $breakpoint == phone{
+        @media (max-width: 800px){
+            @content
+        };
+    }
+}
